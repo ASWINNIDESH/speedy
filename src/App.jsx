@@ -81,7 +81,8 @@ function App() {
         text size: 20px;
       </style>
         {
-          results.map((item, index) => (
+        results.length >0?  
+        results.map((item, index) => (
             <li key={index}>
               <a 
               style={{
@@ -111,10 +112,12 @@ function App() {
                 marginTop: "10px"
               }}>{item.title}</div>
             </li>
-          ))
+          )):
+          <div>not found</div>
           
         }
-      </ul></div></div>
+      </ul></div>
+      </div>
 </>
  }
 export default App;
